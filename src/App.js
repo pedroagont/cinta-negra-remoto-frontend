@@ -1,10 +1,5 @@
 import React, { Fragment } from 'react';
 
-// Views
-import Home from './views/Home';
-import Login from './views/Login';
-import Signup from './views/Signup';
-
 // Components
 import Navigation from './components/Navigation';
 
@@ -12,8 +7,9 @@ import Navigation from './components/Navigation';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
 } from "react-router-dom";
+
+import Routes from './Routes';
 
 function App() {
   return (
@@ -21,15 +17,7 @@ function App() {
       <Router>
         <Navigation />
         <Switch>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/signup">
-            <Signup />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+            { Routes }
         </Switch>
       </Router>
     </Fragment>
