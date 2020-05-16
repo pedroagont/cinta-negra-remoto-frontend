@@ -8,7 +8,7 @@ import {
   BrowserRouter as Router,
   Switch,
 } from "react-router-dom";
-
+import { Container } from 'reactstrap';
 import Routes from './Routes';
 
 function App() {
@@ -16,9 +16,11 @@ function App() {
     <Fragment>
       <Router>
         <Navigation />
-        <Switch>
-            { Routes }
-        </Switch>
+        <Container className="my-5">
+          <Switch>
+              { Routes }
+          </Switch>
+        </Container>
       </Router>
     </Fragment>
   );
